@@ -4,9 +4,9 @@ const app = express();
 const expressLayouts = require('express-ejs-layouts');
 const path = require('path');
 // Serve static files from the "frontend" directory
-app.use(express.static(path.join(__dirname, '..', 'frontend')));
-app.use(expressLayouts);
 app.set('view engine', 'ejs');
+app.use(expressLayouts);
+app.set('layout', './layouts/layout'); // not at views root
 
 app.set('layout', './layouts/layout'); // not at views root
 app.get('/', function (req, res) {
