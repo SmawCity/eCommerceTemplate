@@ -1,0 +1,24 @@
+{
+  "name": "ecommercetemplate",
+  "version": "1.0.0",
+  "description": "This project is centered around creating a template for an eCommerce website integrated with MySQL. It is intended to easily allow a company to insert their own specific information without undergoing the labor of creating the website from scratch.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1"
+  }
+}
