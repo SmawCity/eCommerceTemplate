@@ -12,9 +12,6 @@ app.set('layout', './layouts/layout'); // not at views root
 app.get('/', function (req, res) {
   res.render('index', { title: 'Home' });
 });
-// app.get('/', function (req, res) {
-//   res.send('Hello');
-// });
 
 /* ***********************
  * Server Operations
