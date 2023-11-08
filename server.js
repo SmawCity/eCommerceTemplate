@@ -11,7 +11,7 @@ app.set('layout', './layouts/layout'); // not at views root
 app.get('/', function (req, res) {
   res.render('index', { title: 'Home' });
 });
-app.get('/cart.ejs', function (req, res) {
+app.get('/cart.ejs', function (req, res) { // delete later
   res.render('cart', { title: 'Cart' }); // Renders page2.ejs
 });
 
