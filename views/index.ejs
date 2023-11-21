@@ -1,4 +1,79 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/public/css/base.css">
 <html>
-    <h1><a href="/cart.ejs">j</a></h1>
+    <body class="index-body">
+        <div class="index-slideshow-container">
+            <div class="index-slides">
+                <a href="/views/productPage.ejs"><img src="/images/blank.png" alt="Image 1"></a>
+            </div>
+            <div class="index-slides">
+                <a href="/views/productPage.ejs"><img src="/images/blank.png" alt="Image 1"></a>
+            </div>
+            <div class="index-slides">
+                <a href="/views/productPage.ejs"><img src="/images/blank.png" alt="Image 1"></a>
+            </div>
+        </div>
+    
+        <hr class="index-separator">
+    
+        <div class="index-card-container" id="cardContainer">
+            <!-- Cards will be dynamically added here using JavaScript -->
+        </div>
+    
+        <script>
+            let slideIndex = 0;
+    
+            function showSlides() {
+                let i;
+                const slides = document.getElementsByClassName("index-slides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1
+                }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 4000); // Change slide every 4 seconds
+            }
+    
+            showSlides(); // Initial call to start the slideshow
+    
+            // JavaScript to dynamically generate cards
+            const cardContainer = document.getElementById("cardContainer");
+    
+            // Example data for cards
+            const cardData = [
+                { imageSrc: "/images/blank.png", text: "Card 1" },
+                { imageSrc: "/images/blank.png", text: "Card 2" },
+                { imageSrc: "/images/blank.png", text: "Card 3" },
+                { imageSrc: "/images/blank.png", text: "Card 4" },
+                { imageSrc: "/images/blank.png", text: "Card 5" },
+                { imageSrc: "/images/blank.png", text: "Card 6" },
+                { imageSrc: "/images/blank.png", text: "Card 7" },
+                { imageSrc: "/images/blank.png", text: "Card 8" },
+                { imageSrc: "/images/blank.png", text: "Card 9" },
+                { imageSrc: "/images/blank.png", text: "Card 10" },
+                { imageSrc: "/images/blank.png", text: "Card 11" },
+                { imageSrc: "/images/blank.png", text: "Card 12" },
+                // Add more data as needed
+            ];
+    
+            // cardData.forEach(data => {
+            //     const card = document.createElement("div");
+            //     card.className = "index-card";
+            //     card.innerHTML = `<img src="${data.imageSrc}" alt="${data.text}"><p>${data.text}</p>`;
+            //     cardContainer.appendChild(card);
+            // });
+
+            cardData.forEach(data => {
+                const card = document.createElement("a");
+                card.className = "index-card";
+                card.href = "/views/productPage.ejs"; // Set the href to link to products later
+                card.innerHTML = `<img src="${data.imageSrc}" alt="${data.text}"><p>${data.text}</p>`;
+                cardContainer.appendChild(card);
+            });
+        </script>
+    </body>
 </html>

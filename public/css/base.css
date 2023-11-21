@@ -1,0 +1,65 @@
+.index-body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    text-align: center; /* Center text */
+}
+
+.index-slideshow-container {
+    max-width: 80%; /* Set the maximum width for computer screens */
+    width: 100%; /* Fallback for smaller screens */
+    margin: auto;
+    position: relative;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.index-slides {
+    display: none;
+    width: 100%; /* Make slides take 100% width */
+}
+
+.index-img {
+    width: 100%;
+}
+
+.index-separator {
+    border: 1px solid black;
+    margin: 20px auto;
+    width: 80%; /* Set the maximum width for computer screens */
+    box-sizing: border-box; /* Include border in the width */
+}
+
+.index-card-container {
+    width: 80%; /* Set the maximum width for computer screens */
+    margin: auto;
+    display: flex; /* Arrange cards in a row */
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+
+.index-card {
+    box-sizing: border-box;
+    width: calc(20%-20px); /* Cards take 100% width on mobile */
+    margin: 10px; /* Adjust margin as needed */
+    text-align: center; /* Center text */
+    border: 1px solid #000000; /* Add a border to the cards */
+    text-decoration: none; /* Remove the default underline from links */
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .index-slideshow-container,
+    .index-separator,
+    .index-card-container {
+        max-width: 80%;
+    }
+
+    .index-card {
+        width: 20%;
+    }
+}
+
+@media (max-width: 767px) {
+    .index-card {
+        width: 100%;
+    }
+}
