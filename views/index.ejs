@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/public/css/base.css">
+<link rel="stylesheet" href="/css/base.css">
 <html>
     <body class="index-body">
         <div class="index-slideshow-container">
             <div class="index-slides">
-                <a href="/views/productPage.ejs"><img src="/images/blank.png" alt="Image 1"></a>
+                <a href="/views/productPage.ejs"><img class="index-img" src="/images/Slide1.png" alt="Image 1"></a>
             </div>
             <div class="index-slides">
-                <a href="/views/productPage.ejs"><img src="/images/blank.png" alt="Image 1"></a>
+                <a href="/views/productPage.ejs"><img class="index-img" src="/images/Slide3.png" alt="Image 1"></a>
             </div>
             <div class="index-slides">
-                <a href="/views/productPage.ejs"><img src="/images/blank.png" alt="Image 1"></a>
+                <a href="/views/productPage.ejs"><img class="index-img" src="/images/Slide2.png" alt="Image 1"></a>
             </div>
         </div>
     
@@ -45,33 +45,24 @@
     
             // Example data for cards
             const cardData = [
-                { imageSrc: "/images/blank.png", text: "Card 1" },
-                { imageSrc: "/images/blank.png", text: "Card 2" },
-                { imageSrc: "/images/blank.png", text: "Card 3" },
-                { imageSrc: "/images/blank.png", text: "Card 4" },
-                { imageSrc: "/images/blank.png", text: "Card 5" },
-                { imageSrc: "/images/blank.png", text: "Card 6" },
-                { imageSrc: "/images/blank.png", text: "Card 7" },
-                { imageSrc: "/images/blank.png", text: "Card 8" },
-                { imageSrc: "/images/blank.png", text: "Card 9" },
-                { imageSrc: "/images/blank.png", text: "Card 10" },
-                { imageSrc: "/images/blank.png", text: "Card 11" },
-                { imageSrc: "/images/blank.png", text: "Card 12" },
+                { imageSrc: "/images/PlaceholderProduct.png", text: "Product 1" },
+                { imageSrc: "/images/PlaceholderProduct.png", text: "Product 2" },
+                { imageSrc: "/images/PlaceholderProduct.png", text: "Product 3" },
+                { imageSrc: "/images/PlaceholderProduct.png", text: "Product 4" },
+                { imageSrc: "/images/PlaceholderProduct.png", text: "Product 5" },
+                { imageSrc: "/images/PlaceholderProduct.png", text: "Product 6" },
+                { imageSrc: "/images/PlaceholderProduct.png", text: "Product 7" },
+                { imageSrc: "/images/PlaceholderProduct.png", text: "Product 8" },
+                { imageSrc: "/images/PlaceholderProduct.png", text: "Product 9" },
+                { imageSrc: "/images/PlaceholderProduct.png", text: "Product 10" }
                 // Add more data as needed
             ];
-    
-            // cardData.forEach(data => {
-            //     const card = document.createElement("div");
-            //     card.className = "index-card";
-            //     card.innerHTML = `<img src="${data.imageSrc}" alt="${data.text}"><p>${data.text}</p>`;
-            //     cardContainer.appendChild(card);
-            // });
 
             cardData.forEach(data => {
                 const card = document.createElement("a");
                 card.className = "index-card";
                 card.href = "/views/productPage.ejs"; // Set the href to link to products later
-                card.innerHTML = `<img src="${data.imageSrc}" alt="${data.text}"><p>${data.text}</p>`;
+                card.innerHTML = `<img class="index-img" src="${data.imageSrc}" alt="${data.text}"><p>${data.text}</p>`;
                 cardContainer.appendChild(card);
             });
         </script>

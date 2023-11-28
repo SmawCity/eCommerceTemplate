@@ -1,3 +1,73 @@
+header, nav, main, footer {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header img {
+    height: 40px;
+}
+
+header input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    flex-grow: 2;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+}
+
+main {
+    width: 80%;
+}
+
+.footer {
+    clear: both;
+    background-color: #fff;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #555;
+    margin-right: 20px;
+}
+
+.social a {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
 .index-body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,31 +75,35 @@
 }
 
 .index-slideshow-container {
-    max-width: 80%; /* Set the maximum width for computer screens */
+    max-width: 100%; /* Set the maximum width for computer screens */
     width: 100%; /* Fallback for smaller screens */
+    height: auto;
     margin: auto;
     position: relative;
-    overflow: hidden; /* Hide overflowing content */
+    /*overflow: hidden; /* Hide overflowing content */
 }
 
 .index-slides {
     display: none;
-    width: 100%; /* Make slides take 100% width */
+    max-width: 100%; /* Make slides take 100% width */
+    height: auto;
 }
 
 .index-img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 .index-separator {
     border: 1px solid black;
     margin: 20px auto;
-    width: 80%; /* Set the maximum width for computer screens */
+    max-width: 100%; /* Set the maximum width for computer screens */
     box-sizing: border-box; /* Include border in the width */
 }
 
 .index-card-container {
-    width: 80%; /* Set the maximum width for computer screens */
+    width: 100%; /* Set the maximum width for computer screens */
+    height: auto;
     margin: auto;
     display: flex; /* Arrange cards in a row */
     flex-wrap: wrap; 
@@ -38,7 +112,7 @@
 
 .index-card {
     box-sizing: border-box;
-    width: calc(20%-20px); /* Cards take 100% width on mobile */
+    max-width: calc(20% - 20px); /* Cards take 100% width on mobile */
     margin: 10px; /* Adjust margin as needed */
     text-align: center; /* Center text */
     border: 1px solid #000000; /* Add a border to the cards */
@@ -46,11 +120,16 @@
     display: block;
 }
 
+.index-card img {
+    max-width: 100%;
+    height: auto;
+}
+
 @media (min-width: 768px) {
     .index-slideshow-container,
     .index-separator,
     .index-card-container {
-        max-width: 80%;
+        max-width: 100%;
     }
 
     .index-card {
